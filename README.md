@@ -7,9 +7,6 @@ This is a Flutter-based application designed to manage and monitor various devic
 - **Temperature Control:** Set and monitor the office temperature.
 - **Dynamic Background:** Background changes based on the selected device.
 
-## Screenshots
-
-![Home Screen](C:\Users\sweth\OneDrive\Pictures\Screenshots\App screenshot.png)
 
 ## Getting Started
 
