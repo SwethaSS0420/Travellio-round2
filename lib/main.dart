@@ -35,12 +35,18 @@ class _MyHomePageState extends State<MyHomePage> {
   ];
   String selectedBgImage='';
   int temp = 23;
+  bool x=false;
   int get count => items.where((item) => item.isSelected).length;
 
-  void toggleSelection(int index) {
+  void toggleSelection(int index,bool x) {
+    setState(() {
+      x=!x;
+      selectedBgImage = x?items[index].bgImage:'';
+    });
+  }
+  void turnOn(int index) {
     setState(() {
       items[index].isSelected = !items[index].isSelected;
-      selectedBgImage = items[index].isSelected ? items[index].bgImage : '';
     });
   }
 
@@ -82,7 +88,11 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
   }
-
+  void addItem() {
+    setState(() {
+      items.add(ListItem('AC', 'assets/ac.png', 'assets/acbg.png'));
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,7 +110,12 @@ class _MyHomePageState extends State<MyHomePage> {
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () {
-              // open settings
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Settings opened'),
+                  duration: Duration(seconds: 3),
+                ),
+              );
             },
           ),
         ],
@@ -125,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               const SizedBox(height: 5),
               Text(
-                '$count devices active',
+                count==1?'$count device active':'$count devices active',
                 style: TextStyle(fontSize: 20, color: Colors.white),
               ),
               const SizedBox(height: 10),
@@ -150,16 +165,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
-              const SizedBox(height: 225),
+              const SizedBox(height: 250),
               Container(
-                height: 250,
+                height: 225,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: items.asMap().entries.map((entry) {
                     int index = entry.key;
                     ListItem item = entry.value;
                     return GestureDetector(
-                      onTap: () => toggleSelection(index),
+                      onTap: () => toggleSelection(index,x),
                       child: Container(
                         width: 200,
                         margin: const EdgeInsets.symmetric(horizontal: 10.0),
@@ -198,7 +213,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               top: 15,
                               right: 15,
                               child: GestureDetector(
-                                onTap: () => toggleSelection(index),
+                                onTap: () => turnOn(index),
                                 child: Container(
                                   width: 20,
                                   height: 20,
@@ -228,7 +243,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       icon: const Icon(Icons.add),
                       color: Colors.white,
                       onPressed: () {
-                        // Add item
+                        addItem();
                       },
                     ),
                     const Text(
