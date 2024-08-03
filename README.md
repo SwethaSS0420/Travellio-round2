@@ -9,7 +9,7 @@ This is a Flutter-based application designed to manage and monitor various devic
 
 ## Screenshots
 
-![Home Screen](path_to_screenshot)
+![Home Screen]("C:\Users\sweth\OneDrive\Pictures\Screenshots\App screenshot.png")
 
 ## Getting Started
 
@@ -33,7 +33,7 @@ Before you begin, ensure you have met the following requirements:
    flutter pub get
    flutter run
 
-### Usage
+## Usage
 
 Controlling Devices
  - Tap on a device to toggle its status.
@@ -43,7 +43,7 @@ Setting Temperature
  - Tap on the temperature control to open the temperature settings.
  - Adjust the temperature using the slider and save.
 
-### Contributor
+## Contributor
 
 Swetha Sriram
 https://github.com/SwethaSS0420
