@@ -6,7 +6,7 @@ This is a Flutter-based application designed to manage and monitor various devic
 
 - **Temperature Control:** Set and monitor the office temperature.
 - **Dynamic Background:** Background changes based on the selected device.
-
+- **Add new devices:** Add additional devices to the list
 
 ## Getting Started
 
@@ -33,8 +33,9 @@ Before you begin, ensure you have met the following requirements:
 ## Usage
 
 Controlling Devices
- - Tap on a device to toggle its status.
+ - Tap on a cirlce on the device to make it active and track the count of active devices.
  - The background will change based on the selected device.
+ - Add new devices by using the add icon.
 
 Setting Temperature
  - Tap on the temperature control to open the temperature settings.
