@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travellio_round2/welcome.dart';
 
 class ListItem {
   String title;
@@ -103,7 +104,10 @@ class _MyHomePageState extends State<MyHomePage> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => WelcomePage()),
+            );
           },
         ),
         actions: <Widget>[
@@ -112,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
-                  content: Text('Settings opened'),
+                  content: Text('Settings'),
                   duration: Duration(seconds: 3),
                 ),
               );
