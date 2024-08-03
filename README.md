@@ -22,13 +22,13 @@ Before you begin, ensure you have met the following requirements:
 
 1. Clone the repository:
 
-   git clone 'https://github.com/SwethaSS0420/Travellio-round2.git'
-   cd Travellio-round2
+   - git clone 'https://github.com/SwethaSS0420/Travellio-round2.git'
+   - cd Travellio-round2
 
 2. Install dependencies
 
-   flutter pub get
-   flutter run
+   - flutter pub get
+   - flutter run
 
 ## Usage
 
