@@ -9,7 +9,7 @@ This is a Flutter-based application designed to manage and monitor various devic
 
 ## Screenshots
 
-![Home Screen]("C:\Users\sweth\OneDrive\Pictures\Screenshots\App screenshot.png")
+![Home Screen](C:\Users\sweth\OneDrive\Pictures\Screenshots\App screenshot.png)
 
 ## Getting Started
 
